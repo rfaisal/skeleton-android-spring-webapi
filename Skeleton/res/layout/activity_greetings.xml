@@ -9,8 +9,104 @@
     tools:context=".GreetingsActivity" >
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/hello_world" 
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        />
+
+	<TextView
+	    android:id="@+id/textView4"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/editTextId"
+	    android:layout_alignBottom="@+id/editTextId"
+	    android:layout_toLeftOf="@+id/editTextGreeting"
+	    android:text="@string/g_id" />
+
+	<TextView
+	    android:id="@+id/textView3"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/editTextGreeting"
+	    android:layout_alignBottom="@+id/editTextGreeting"
+	    android:layout_alignLeft="@+id/textView1"
+	    android:text="@string/g_content" />
+
+	<EditText
+	    android:id="@+id/editTextId"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/editTextGreeting"
+	    android:layout_below="@+id/textView1"
+	    android:layout_marginTop="14dp"
+	    android:ems="10"
+	    android:inputType="number" />
+
+	<EditText
+	    android:id="@+id/editTextGreeting"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/editTextId"
+	    android:layout_toRightOf="@+id/textView3"
+	    android:ems="10"
+	    android:inputType="text" />
+
+	<Button
+	    android:id="@+id/btnDelete"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/btnUpdate"
+	    android:layout_alignBottom="@+id/btnUpdate"
+	    android:layout_alignRight="@+id/editTextGreeting"
+	    android:text="@string/b_delete" />
+
+	<Button
+	    android:id="@+id/btnUpdate"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/btnAdd"
+	    android:layout_alignBottom="@+id/btnAdd"
+	    android:layout_toLeftOf="@+id/btnDelete"
+	    android:text="@string/b_update" />
+
+	<Button
+	    android:id="@+id/btnAdd"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/btnRefresh"
+	    android:layout_alignBottom="@+id/btnRefresh"
+	    android:layout_toLeftOf="@+id/btnUpdate"
+	    android:text="@string/b_add" />
+
+	<Button
+	    android:id="@+id/btnRefresh"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/textView3"
+	    android:layout_toLeftOf="@+id/btnAdd"
+	    android:text="@string/b_refresh" />
+
+	<TextView
+	    android:id="@+id/textView2"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/textView3"
+	    android:layout_below="@+id/btnRefresh"
+	    android:layout_marginTop="19dp"
+	    android:text="@string/all_greetings" />
+
+	<TextView
+	    android:id="@+id/textViewGreetingsResults"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/textView2"
+	    android:layout_centerVertical="true"
+	    android:text="@string/no_greeting" />
 
 </RelativeLayout>
